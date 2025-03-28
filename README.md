@@ -26,55 +26,77 @@ Desenvolver as funcionalidades conforme requisitos
     - [CT004.1] Pelo menos um aluno deve ter duas ou mais atividades cadastradas.
 - [CT005] Cadastre, altere e exclua uma atividade.
 
-## Tecnologias
-Backend: Node.js (v18+)
+# API - Backend com Node.js, Prisma e MySQL
 
-Linguagem: JavaScript
+## Tecnologias Utilizadas
 
-Banco de Dados: MySQL (ou outro compatível com Prisma)
+- **Backend:** Node.js (v18+)
+- **Linguagem:** JavaScript
+- **Banco de Dados:** MySQL (ou outro compatível com Prisma)
+- **ORM:** Prisma
+- **Ambiente de Desenvolvimento:** Visual Studio Code
+- **Testes de API:** Insomnia
+- **Controle de Versão:** Git
+- **Gerenciamento de Pacotes:** npm ou yarn
 
-ORM: Prisma
+---
 
-Ambiente de Desenvolvimento: Visual Studio Code
+## 🚀 Passo a Passo para Executar a API
 
-Testes de API: Insomnia
+### 1️⃣ Clone o Repositório e Acesse a Pasta
+```sh
+$ git clone <URL_DO_REPOSITORIO>
+$ cd api
+```
 
-Controle de Versão: Git
+### 2️⃣ Instale as Dependências
+```sh
+$ npm install
+```
 
-Gerenciamento de Pacotes: npm ou yarn
+### 3️⃣ Configure o Ambiente
+- Renomeie o arquivo `.env.example` para `.env`
+- Preencha a variável `DATABASE_URL` com os dados de conexão do MySQL
 
-## Passo a Passo de como executar a API
+### 4️⃣ Execute as Migrações do Prisma
+```sh
+$ npx prisma migrate dev --name init
+```
 
-Passo a Passo Resumido para Executar a API:
+### 5️⃣ (Opcional) Popule o Banco de Dados com Dados de Teste
+```sh
+$ npx prisma db seed
+```
 
-Clone o repositório e acesse a pasta /api.
+### 6️⃣ Inicie o Servidor
+```sh
+$ npm run dev
+```
+> O servidor estará rodando na porta `3000`.
 
-Instale as dependências com npm install.
+---
 
-Configure o ambiente:
+## 🔍 Testando a API
 
-Renomeie .env.example para .env
+### 📌 Utilize o Insomnia para Testar as Rotas
+- `/api/alunos`
+- `/api/atividades`
 
-Preencha DATABASE_URL com seus dados de conexão MySQL
+### 📌 Siga a Sequência de Testes
+Os testes estão documentados no formato `[CT001]` a `[CT005]`.
 
-Execute as migrações do Prisma: npx prisma migrate dev --name init.
+---
 
-(Opcional) Popule o banco com dados de teste: npx prisma db seed.
+## 🛠️ Dicas Rápidas
 
-Inicie o servidor: npm run dev (irá rodar na porta 3000).
+- Verifique possíveis erros nos logs do servidor.
+- Acesse o Prisma Studio para visualizar os dados do banco:
+```sh
+$ npx prisma studio
+```
+- **Mantenha o arquivo `.env` seguro e atualizado!**
 
-Para testar:
+---
 
-Use o Insomnia com as rotas /api/alunos e /api/atividades
+A API estará pronta para cadastrar **alunos, telefones e atividades** conforme os requisitos do projeto. 🚀
 
-Siga a sequência de testes [CT001] a [CT005] do documento
-
-Dica rápida:
-
-Verifique erros nos logs do servidor
-
-Acesse npx prisma studio para visualizar os dados
-
-Mantenha o .env seguro e atualizado
-
-A API estará pronta para cadastrar alunos, telefones e atividades conforme os requisitos.
