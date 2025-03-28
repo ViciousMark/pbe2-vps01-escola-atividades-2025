@@ -1,0 +1,299 @@
+type: collection.insomnia.rest/5.0
+name: ESCOLA ACME
+meta:
+  id: wrk_e9d627566656479789ec3f3f160435f7
+  created: 1743171865823
+  modified: 1743171865823
+collection:
+  - name: ATIVIDADE
+    meta:
+      id: fld_fca16f47f2de4cadbcd3b6a9a2456852
+      created: 1743171902056
+      modified: 1743171902056
+      sortKey: -1743171902056
+    children:
+      - name: READONE
+        meta:
+          id: req_72ba570cf45f478b8e2a989d397b43d7
+          created: 1743171930982
+          modified: 1743172046057
+          isPrivate: false
+          sortKey: -1743172041448
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/atividades/5
+        name: DELETE
+        meta:
+          id: req_b0024879c6324385b120e39ce19fe7a9
+          created: 1743172024698
+          modified: 1743183332996
+          isPrivate: false
+          sortKey: -1743172041248
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/atividades/5
+        name: UPDATE
+        meta:
+          id: req_6c496d5b8094459496615e397b87df96
+          created: 1743172031186
+          modified: 1743182384626
+          isPrivate: false
+          sortKey: -1743172041348
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Trabalho de Ciências",
+              "alunoRA": "20230005",
+              "dataInicio": "2025-05-02T13:00:00Z",
+              "peso": 1.5
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/atividades
+        name: READ
+        meta:
+          id: req_3cea1290c4d547d787039ecbb3dacdb2
+          created: 1743172035160
+          modified: 1743179804650
+          isPrivate: false
+          sortKey: -1743172041548
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/atividades
+        name: CREATE
+        meta:
+          id: req_9c94d98868994fbfa00635c05f5728bd
+          created: 1743172038499
+          modified: 1743182736425
+          isPrivate: false
+          sortKey: -1743172041648
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Trabalho de História - Revolução Francesa",
+              "alunoRA": "20230001",
+              "dataInicio": "2025-04-05T10:00:00Z",
+              "dataEntrega": "2025-04-20T23:59:00Z",
+              "peso": 1.8,
+              "nota": 9.0
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: ALUNO
+    meta:
+      id: fld_0578477ea8534fbdbd65703fc0a0e4f3
+      created: 1743171909427
+      modified: 1743171909427
+      sortKey: -1743171909427
+    children:
+      - url: http://localhost:3001/alunos/20230005
+        name: DELETE
+        meta:
+          id: req_d35cd7d2a2774c47ad636b455ab6b441
+          created: 1743171913665
+          modified: 1743183236726
+          isPrivate: false
+          sortKey: -1743171918527
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/alunos/20230002
+        name: UPDATE
+        meta:
+          id: req_ac1025ef34aa471fac0e5d71b452621e
+          created: 1743171924842
+          modified: 1743181578223
+          isPrivate: false
+          sortKey: -1743171918627
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"ra": "20230002",
+            		"nome": "Maria Oliveira",
+            		"email": "maria.oliveira@escola.com",
+            		"createdAt": "2025-03-28T15:43:55.398Z",
+            		"updatedAt": "2025-03-28T15:43:55.398Z",
+            		"telefones": [
+            			{
+            				"id": 1,
+            				"numero": "21987654321",
+            				"tipo": "Celular",
+            				"alunoRa": "20230002",
+            				"createdAt": "2025-03-28T15:43:55.398Z",
+            				"updatedAt": "2025-03-28T15:43:55.398Z"
+            			},
+            			{
+            				"numero": "21987654321",
+                 	  "tipo": "Celular"
+            			}
+            		]
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/alunos
+        name: CREATE
+        meta:
+          id: req_8758124cdf884e15a5a05f873745c0c3
+          created: 1743171929899
+          modified: 1743178922398
+          isPrivate: false
+          sortKey: -1743171918827
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "ra": "20230005",
+              "nome": "Pedro Costa",
+              "email": "pedro.costa@escola.com",
+              "telefones": [
+                {
+                  "numero": "51987654321",
+                  "tipo": "Celular"
+                }
+              ]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/alunos
+        name: READ
+        meta:
+          id: req_7fe6c7534ad14d00a4e793ddf468846f
+          created: 1743171956257
+          modified: 1743181123758
+          isPrivate: false
+          sortKey: -1743171918777
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/alunos/20230002
+        name: READONE
+        meta:
+          id: req_01b5d2bf4b164e78ab06c17656b1d94b
+          created: 1743172033128
+          modified: 1743176703329
+          isPrivate: false
+          sortKey: -1743171918677
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_72449f9b95b8cdb370ac7613f73689a9d30c5db6
+    created: 1743171865829
+    modified: 1743171865829
+environments:
+  name: Base Environment
+  meta:
+    id: env_72449f9b95b8cdb370ac7613f73689a9d30c5db6
+    created: 1743171865827
+    modified: 1743171865827
+    isPrivate: false
