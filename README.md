@@ -28,7 +28,7 @@ Desenvolver as funcionalidades conforme requisitos
 
 # API - Backend com Node.js, Prisma e MySQL
 
-## Tecnologias Utilizadas
+## ⚙️ Tecnologias Utilizadas
 
 - **Backend:** Node.js (v18+)
 - **Linguagem:** JavaScript
