@@ -27,5 +27,54 @@ Desenvolver as funcionalidades conforme requisitos
 - [CT005] Cadastre, altere e exclua uma atividade.
 
 ## Tecnologias
+Backend: Node.js (v18+)
+
+Linguagem: JavaScript
+
+Banco de Dados: MySQL (ou outro compatível com Prisma)
+
+ORM: Prisma
+
+Ambiente de Desenvolvimento: Visual Studio Code
+
+Testes de API: Insomnia
+
+Controle de Versão: Git
+
+Gerenciamento de Pacotes: npm ou yarn
 
 ## Passo a Passo de como executar a API
+
+Passo a Passo Resumido para Executar a API:
+
+Clone o repositório e acesse a pasta /api.
+
+Instale as dependências com npm install.
+
+Configure o ambiente:
+
+Renomeie .env.example para .env
+
+Preencha DATABASE_URL com seus dados de conexão MySQL
+
+Execute as migrações do Prisma: npx prisma migrate dev --name init.
+
+(Opcional) Popule o banco com dados de teste: npx prisma db seed.
+
+Inicie o servidor: npm run dev (irá rodar na porta 3000).
+
+Para testar:
+
+Use o Insomnia com as rotas /api/alunos e /api/atividades
+
+Siga a sequência de testes [CT001] a [CT005] do documento
+
+Dica rápida:
+
+Verifique erros nos logs do servidor
+
+Acesse npx prisma studio para visualizar os dados
+
+Mantenha o .env seguro e atualizado
+
+A API estará pronta para cadastrar alunos, telefones e atividades conforme os requisitos.
